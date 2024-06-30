@@ -1,0 +1,35 @@
+---
+version: 2.0.0
+apis:
+- name: API Commons
+  description: The API that returns of list of APIs that are in the API Commons, and
+    allows you to add a manifest for an API.
+  image: https://s3.amazonaws.com/kinlane-productions2/api-commons/api-commons-icon.png
+  tags:
+    - API
+    - License
+  licenses:
+    - type: interface
+      license: http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+      attribution: API Commons
+      url: http://example.com/location-of-license
+    - type: data
+      license: https://opendatacommons.org/licenses/pddl/1-0/
+      attribution: Open Data Commons
+      url: http://example.com/location-of-license    
+    - type: server
+      license: https://opensource.org/license/apache-2-0
+      attribution: Apache 2.0
+      url: http://example.com/location-of-license     
+    - type: client
+      license: https://opensource.org/license/apache-2-0
+      attribution: Apache 2.0
+      url: http://example.com/location-of-license             
+  definitions:
+  - type: APIS_JSON
+    url: http://example.com/apis.json
+tags:
+  - Example
+  - Template
+  - License
+updated: 2024-06-30

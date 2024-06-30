@@ -1,0 +1,79 @@
+{
+    "$id": "https://example.com/person.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "InterfaceLicense",
+    "properties": {
+      "apis": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "keywords": {
+                "type": "string"
+              },
+              "license": {
+                "type": "string"
+              },
+              "attribution": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "definitions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "url"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "description",
+              "image",
+              "keywords",
+              "license",
+              "attribution",
+              "url",
+              "definitions"
+            ]
+          }
+        ]
+      },
+      "tags": {
+        "type": "string"
+      },
+      "updated": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "apis",
+      "tags",
+      "updated"
+    ]
+  }

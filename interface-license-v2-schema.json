@@ -1,0 +1,112 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InterfaceLicense",
+  "description": "This is the JSON Schema for defining validating version 2.0 of the API Commons interface licenses.",
+  "properties": {
+    "apis": {
+      "type": "array",
+      "description": "A listing of APIs that are covered by the interface license.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "A plain language name for the API."
+          },
+          "description": {
+            "type": "string",
+            "description": "A plain language description for the API."
+          },
+          "image": {
+            "type": "string",
+            "description": "A relevant image representation for the API."
+          },
+          "tags": {
+            "type": "array",
+            "description": "Keywords that are applied to the API.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "licenses": {
+            "type": "array",
+            "description": "A set of license to apply to an API.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "The type of the license."
+                },
+                "license": {
+                  "type": "string",
+                  "description": "The license being applied to the API."
+                },
+                "attribution": {
+                  "type": "string",
+                  "description": "The attribution for the license type."
+                },
+                "url": {
+                  "type": "string",
+                  "description": "The URL reference where the license will"
+                }
+              },
+              "required": [
+                "type",
+                "license",
+                "attribution",
+                "url"
+              ]
+            }
+          },
+          "definitions": {
+            "type": "array",
+            "description": "Machine-readable definitions that define the API.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "The type of definition being referenced."
+                },
+                "url": {
+                  "type": "string",
+                  "description": "A URL for the definition of the API."
+                }
+              },
+              "required": [
+                "type",
+                "url"
+              ]
+            }
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "image",
+          "tags",
+          "licenses",
+          "definitions"
+        ]
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Relevant words that describe this API licensing.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "updated": {
+      "type": "string",
+      "description": "The timestamp that applies to when license is updated."
+    }
+  },
+  "required": [
+    "apis",
+    "tags",
+    "updated"
+  ]
+}

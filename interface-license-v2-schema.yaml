@@ -2,13 +2,13 @@
 "$id": https://example.com/person.schema.json
 "$schema": https://json-schema.org/draft/2020-12/schema
 title: InterfaceLicense
-description: This is the JSON Schema for validating API Commons interface licenses.
+description: This is the JSON Schema for defining validating version 2.0 of the API Commons interface licenses.
 properties:
   apis:
     type: array
     description: A listing of APIs that are covered by the interface license.
     items:
-    - type: object
+      type: object
       properties:
         name:
           type: string
@@ -19,23 +19,39 @@ properties:
         image:
           type: string
           description: A relevant image representation for the API.
-        keywords:
-          type: string
+        tags:
+          type: array
           description: Keywords that are applied to the API.
-        license:
-          type: string
-          description: A creative common or license for the API.
-        attribution:
-          type: string
-          description: The attribution for the license type.
-        url:
-          type: string
-          description: The URL reference where the license will reside.
+          items:
+            type: string
+        licenses:
+          type: array
+          description: A set of license to apply to an API.
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: The type of the license.
+              license:
+                type: string
+                description: The license being applied to the API.                       
+              attribution:
+                type: string
+                description: The attribution for the license type.
+              url:
+                type: string
+                description: The URL reference where the license will 
+            required:
+              - type
+              - license
+              - attribution
+              - url              
         definitions:
           type: array
           description: Machine-readable definitions that define the API.
           items:
-          - type: object
+            type: object
             properties:
               type:
                 type: string
@@ -50,14 +66,14 @@ properties:
       - name
       - description
       - image
-      - keywords
-      - license
-      - attribution
-      - url
+      - tags
+      - licenses
       - definitions
   tags:
-    type: string
+    type: array
     description: Relevant words that describe this API licensing.
+    items:
+      type: string    
   updated:
     type: string
     description: The timestamp that applies to when license is updated.

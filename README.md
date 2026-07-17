@@ -1,5 +1,5 @@
 # API Commons Interface License
-This is the repository for managing the schema applied to the licensing of interfaces, providing a machine-readable way to express the licensing for using an API and it's supporting elements.
+This is the repository for managing the schema applied to the licensing of interfaces, providing a machine-readable way to express the licensing for using an API and its supporting elements — its surface, not its implementation.
 
 ## API Commons
 This schema is provided as one of many machine-readable schema which are managed as part of the [API Commons](http://apicommons.org/), providing reusable and openly licensed building blocks of API operations.
@@ -16,8 +16,18 @@ Version 1.0 of the API Commons Interface License was published in 2014, and can 
 ## Version 2.0
 Version 2.0 of the API Commons Interface License has been recently published and expanded to allow for the nuance between your API, data, as well as server and client code.
 
-- V1 JSON Schema ([JSON](interface-license-v1-schema.json)) ([YAML](interface-license-v1-schema.yaml))
-- Example ([JSON](interface-license-v1-example.json)) ([YAML](interface-license-v1-example.yaml))
+- V2 JSON Schema ([JSON](interface-license-v2-schema.json)) ([YAML](interface-license-v2-schema.yaml))
+- Example ([JSON](interface-license-v2-example.json)) ([YAML](interface-license-v2-example.yaml))
 
 ## Support
 If you have any questions or comments please [submit an issue as part of this repository](https://github.com/api-commons/interface-license/issues/new), or visit [API Commons](http://apicommons.org/) to engage with the wider community around this schema.
+
+## Part of API Commons
+
+A machine-readable building block from **[API Commons](https://apicommons.org)** — open specifications and schemas for the APIs you produce and consume. See all building blocks and tools at **[apicommons.org](https://apicommons.org)** and the tools at **[apicommons.org/tools](https://apicommons.org/tools/)**.
+
+**Related building blocks**
+- [policies](https://github.com/api-commons/policies) — the business rules behind API governance
+- [plans](https://github.com/api-commons/plans) — machine-readable API access plans, tiers, and pricing
+- [guidance](https://github.com/api-commons/guidance) — the how-to layer that turns governance rules into help
+- [vocabulary](https://github.com/api-commons/vocabulary) — shared words and definitions for API operations
